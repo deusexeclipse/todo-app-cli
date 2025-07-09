@@ -1,0 +1,21 @@
+# виртуальные окружения
+venv/
+.env/
+.venv/
+
+# pycache
+__pycache__/
+*.pyc
+
+# IDE
+.vscode/
+.idea/
+
+# сборка и установка
+build/
+dist/
+*.egg-info/
+
+# ОС
+.DS_Store
+Thumbs.db

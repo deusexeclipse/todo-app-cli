@@ -1,0 +1,25 @@
+  Getting requirements to build wheel ... error
+  error: subprocess-exited-with-error
+
+  × Getting requirements to build wheel did not run successfully.
+  │ exit code: 1
+  ╰─> [9 lines of output]
+      running egg_info
+      creating todo_client.egg-info
+      writing todo_client.egg-info\PKG-INFO
+      writing dependency_links to todo_client.egg-info\dependency_links.txt
+      writing entry points to todo_client.egg-info\entry_points.txt
+      writing requirements to todo_client.egg-info\requires.txt
+      writing top-level names to todo_client.egg-info\top_level.txt
+      writing manifest file 'todo_client.egg-info\SOURCES.txt'
+      error: package directory 'todo_client' does not exist
+      [end of output]
+
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: subprocess-exited-with-error
+
+× Getting requirements to build wheel did not run successfully.
+│ exit code: 1
+╰─> See above for output.
+
+note: This error originates from a subprocess, and is likely not a problem with pip.

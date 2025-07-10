@@ -9,7 +9,7 @@ app = typer.Typer()
 console = Console()
 strike_style = Style(strike=True)  
 
-API_BASE = "http://127.0.0.1:8000"
+API_BASE = "http://45.141.103.196/"
 
 def check_connection():
     try:

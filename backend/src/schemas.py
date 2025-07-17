@@ -4,12 +4,13 @@ class TaskBase(BaseModel):
     name: str
     date: str
     complite: bool
-
+    
 class TaskCreate(TaskBase):
     id: int
     name: str
     date: str
     complite: bool
+    level: int
 
     class Config:
         from_attributes = True

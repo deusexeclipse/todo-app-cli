@@ -9,6 +9,15 @@ class Task(Base):
     name = Column(String)
     date = Column(String, index=True)
     complite = Column(Boolean)
+    author = Column(String)
+
+
+class User(Base):
+    _tablename_ = "users"
+
+    id = Column(Integer, primary_key=True, index=True)
+    name = Column(String)
+    password = Column(String)
 
 
 

@@ -1,4 +1,5 @@
 import typer
+from typing_extensions import Annotated
 import requests
 from requests.exceptions import ConnectionError
 from rich.console import Console
@@ -9,7 +10,7 @@ app = typer.Typer()
 console = Console()
 strike_style = Style(strike=True)  
 
-API_BASE = "http://45.141.103.196/"
+API_BASE = "http://127.0.0.1:8000/"
 
 def check_connection():
     try:
@@ -18,6 +19,10 @@ def check_connection():
         print("сервер не отвечает")
         raise typer.Exit(code=1)
 
+@app.command()
+def reg(name: str, password: Annotated[str, typer.Option(prompt=True)]):
+    '''зарегистрировать новго пользователя'''
+    
 @app.command()
 def list():
     '''получить все задачи'''
@@ -72,8 +77,8 @@ def delete(id: int):
     console.print(f"задача {id} удалена")
 
 @app.command()
-def status(id: int):
-    '''обновить статус задачи'''
+def check(id: int):
+    '''отметить задачу выполненной'''
     check_connection()
     r = requests.get(f"{API_BASE}/todo/status", params={"id": id})
     console.print("mission complited.")
